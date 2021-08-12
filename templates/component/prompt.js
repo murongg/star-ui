@@ -16,7 +16,7 @@ module.exports = {
     let {
       name
     } = inputData
-    name = firstLetterToUpperCase(name)
+    // name = firstLetterToUpperCase(name)
     const type = 'add'
     const actions = [{
       type,
@@ -30,6 +30,10 @@ module.exports = {
       type,
       path: `packages/${name}/__tests__/index.test.ts`,
       templateFile: 'templates/component/index.test.ts.hbs'
+    }, {
+      type,
+      path: `packages/${name}/package.json`,
+      templateFile: 'templates/component/package.hbs'
     }]
     return actions
   }
