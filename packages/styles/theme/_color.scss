@@ -1,0 +1,25 @@
+// theme color
+$star-default-color: var(--star-default-color, #dcdfe6);
+$star-primary-color: var(--star-primary-color, #5680f9);
+$star-success-color: var(--star-success-color, #2ecc71);
+$star-warning-color: var(--star-warning-color, #f39c12);
+$star-danger-color: var(--star-danger-color, #ff4757);
+$star-secondary-color: var(--star-secondary-color, #4c36dd);
+$star-info-color: var(--star-info-color, #909399);
+$star-light-color: var(--star-light-color, #ffffff);
+
+// text color
+$star-text-primary-color: var(--star-text-primary-color, #303133);
+$star-text-regular-color: var(--star-text-regular-color, #606266);
+$star-text-secondary-color: var(--star-text-secondary-color, #909399);
+$star-text-placeholder-color: var(--star-text-placeholder-color, #c0c4cc);
+$star-text-light-color: var(--star-text-light-color, #ffffff);
+
+// border color
+$star-border-base-color: var(--star-border-base-color, #dcdfe6);
+$star-border-light-color: var(--star-border-light-color, #e4e7ed);
+$star-border-lighter-color: var(--star-border-lighter-color, #000000);
+$star-border-extra-light-color: var(--star-border-extra-light-color, #f2f6fc);
+
+// shadow color
+$star-default-shadow-color: var(--star-default-shadow-color, #c0c4cc);

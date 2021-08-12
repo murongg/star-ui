@@ -1,0 +1,26 @@
+{
+  "name": "star-ui",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "木荣 <372638156@qq.com>",
+  "homepage": "https://github.com/murongg/star-ui#readme",
+  "license": "ISC",
+  "main": "lib/star-ui.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@star-ui/button": "^0.0.0",
+    "@star-ui/icon": "^0.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murongg/star-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/murongg/star-ui/issues"
+  }
+}

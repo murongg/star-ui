@@ -1,0 +1,8 @@
+@import "./transition/index";
+.slide-fade-enter-active {
+  animation: fadeIn 0.5s;
+}
+
+.slide-fade-leave-active {
+  animation: fadeOut 0.5s;
+}

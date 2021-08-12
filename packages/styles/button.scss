@@ -1,0 +1,137 @@
+@import "./theme/index";
+@import "./common/variables";
+@import "./mixins/animation";
+
+$prefix: "#{$namespace}-button";
+
+@mixin star-button-type($color) {
+  background-color: $color;
+  border: $star-border-width $star-border-style $color;
+  &.#{$prefix}--plain {
+    color: $color !important;
+    .#{$prefix}__icon {
+      color: $color;
+    }
+  }
+  &.#{$prefix}--shadow {
+    box-shadow: $star-shadow-offset $star-shadow-blur $color;
+  }
+}
+
+@mixin star-button-size($height, $fontSize) {
+  height: $height;
+  font-size: $fontSize;
+  .#{$prefix}__icon {
+    font-size: $fontSize;
+  }
+  &.#{$prefix}--circle {
+    padding: unset;
+    height: $height;
+    width: $height;
+  }
+}
+
+.#{$prefix} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  line-height: inherit;
+  width: max-content;
+  color: $star-text-light-color;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &__icon {
+    color: $star-text-light-color;
+    line-height: inherit;
+  }
+
+  &:active {
+    outline: none;
+    opacity: $star-active-opacity;
+  }
+
+  // type
+  &--default {
+    border: $star-border-width $star-border-style $star-default-color;
+    background-color: $star-light-color;
+    color: $star-text-regular-color;
+    &.#{$prefix}--plain {
+      border: $star-border-width $star-border-style $star-default-color;
+    }
+    .#{$prefix}__icon {
+      color: $star-text-regular-color;
+    }
+    &.#{$prefix}--shadow {
+      box-shadow: $star-shadow-offset $star-shadow-blur $star-default-shadow-color;
+    }
+  }
+  &--primary {
+    @include star-button-type($star-primary-color);
+  }
+  &--success {
+    @include star-button-type($star-success-color);
+  }
+  &--danger {
+    @include star-button-type($star-danger-color);
+  }
+  &--warning {
+    @include star-button-type($star-warning-color);
+  }
+  &--info {
+    @include star-button-type($star-info-color);
+  }
+  // size
+  &--normal {
+    padding: 0 16px;
+    @include star-button-size($star-button-height-normal, $star-font-size-md);
+  }
+  &--large {
+    width: 100%;
+    @include star-button-size($star-button-height-large, $star-font-size-lg);
+  }
+  &--small {
+    padding: 0 8px;
+    @include star-button-size($star-button-height-small, $star-font-size-sm);
+  }
+  &--mini {
+    padding: 0 4px;
+    @include star-button-size($star-button-height-mini, $star-font-size-xs);
+  }
+
+  // shape
+  &--square {
+    border-radius: none;
+  }
+  &--round {
+    border-radius: $star-border-radius-md;
+  }
+  &--semicircle {
+    border-radius: $star-border-radius-lg;
+  }
+  &--circle {
+    border-radius: $star-border-radius-max;
+    text-align: center;
+  }
+
+  // plain
+  &--plain {
+    background-color: transparent;
+  }
+
+  // loading
+
+  &--loading {
+    animation: rotating $star-animation-duration-slow $star-animation-linear infinite;
+  }
+
+  // disabled
+  &:disabled {
+    opacity: $star-disabled-opacity;
+  }
+}

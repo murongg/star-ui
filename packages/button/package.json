@@ -1,0 +1,9 @@
+{
+  "name": "@star-ui/button",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "木荣 <372638156@qq.com>",
+  "homepage": "https://github.com/murongg/star-ui#readme",
+  "license": "ISC",
+  "main": "dist/main.js"
+}

@@ -1,0 +1,9 @@
+$star-animation-duration-slow: var(--star-animation-duration-slow, 2s);
+$star-animation-duration-base: var(--star-animation-duration-base, 200ms);
+$star-animation-duration-fast: var(--star-animation-duration-fast, 100ms);
+
+$star-animation-ease-in: var(--star-animation-ease-in, cubic-bezier(0.5, 0, 0.84, 0.25));
+$star-animation-ease-out: var(--star-animation-ease-out, cubic-bezier(0.16, 0.75, 0.5, 1));
+$star-animation-ease-in-out: var(--star-animation-ease-in-out, cubic-bezier(0.5, 0.05, 0.5, 0.95));
+$star-animation-ease-in-smooth: var(--star-animation-ease-in-smooth, cubic-bezier(0.645, 0.045, 0.355, 1));
+$star-animation-linear: var(--star-animation-linear, cubic-bezier(0, 0, 1, 1));

@@ -1,0 +1,28 @@
+// font family
+$star-font-family: var(
+  --star-font-family,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Helvetica Neue",
+  Helvetica,
+  Segoe UI,
+  Arial,
+  Roboto,
+  "PingFang SC",
+  "miui",
+  "Hiragino Sans GB",
+  "Microsoft Yahei",
+  sans-serif
+);
+
+// font size
+$star-font-size-xs: var(--star-font-size-xs, 10px);
+$star-font-size-sm: var(--star-font-size-sm, 12px);
+$star-font-size-md: var(--star-font-size-md, 14px);
+$star-font-size-lg: var(--star-font-size-lg, 16px);
+
+// line height
+$star-line-height-xs: var(--star-line-height-xs, 14px);
+$star-line-height-sm: var(--star-line-height-sm, 18px);
+$star-line-height-md: var(--star-line-height-md, 20px);
+$star-line-height-lg: var(--star-line-height-lg, 22px);

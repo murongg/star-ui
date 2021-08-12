@@ -1,0 +1,11 @@
+$star-button-height-normal: var(--star-button-height-normalx, 40px);
+$star-button-height-large: var(--star-button-height-large, 40px);
+$star-button-height-small: var(--star-button-height-small, 30px);
+$star-button-height-mini: var(--star-button-height-mini, 24px);
+
+$star-disabled-opacity: var(--star-disabled-opacity, 0.6);
+$star-active-opacity: var(--star-active-opacity, 0.8);
+
+// shadow
+$star-shadow-offset: var(--star-shadow-offset, 0 5px);
+$star-shadow-blur: var(--star-shadow-blur, 20px);
