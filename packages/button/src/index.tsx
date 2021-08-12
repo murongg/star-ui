@@ -1,6 +1,6 @@
 import { computed, defineComponent, PropType, toRefs, ComponentCustomProps, SetupContext } from 'vue'
 
-const classPrefix = "star-button"
+const classPrefix = 'star-button'
 export type IButtonType = PropType<'primary' | 'success' | 'danger' | 'warning' | 'info' | 'default'>;
 export type IButtonSize = PropType<'mini' | 'small' | 'normal' | 'large' | 'long'>;
 export type IButtonShape = PropType<'square' | 'round' | 'semicircle' | 'circle'>;
@@ -12,14 +12,14 @@ export interface IButtonProps extends ComponentCustomProps {
   plain: boolean
   disabled: boolean
   shadow: boolean
-  textColor: String
+  textColor: string
 }
 export default defineComponent({
   name: 'StarButton',
   props: {
     type: {
       type: String as IButtonType,
-      default: "default",
+      default: 'default',
       validator: (val: string) => {
         return [
           'default',
@@ -33,7 +33,7 @@ export default defineComponent({
     },
     size: {
       type: String as IButtonSize,
-      default: "normal",
+      default: 'normal',
       validator: (val: string) => {
         return [
           'mini',
@@ -46,7 +46,7 @@ export default defineComponent({
     },
     shape: {
       type: String as IButtonShape,
-      default: "round",
+      default: 'round',
       validator: (val: string) => {
         return [
           'square',
@@ -57,36 +57,36 @@ export default defineComponent({
       },
     },
     icon: {
-      type: String
+      type: String,
     },
     iconSize: {
-      type: [String, Number]
+      type: [String, Number],
     },
     iconColor: {
-      type: String
+      type: String,
     },
     plain: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     loadingSize: {
       type: [String, Number],
     },
     loadingText: {
       type: String,
-      default: '加载中...'
+      default: '加载中...',
     },
     shadow: {
       type: Boolean,
-      default: false
+      default: false,
     },
     shadowStyle: {
       type: String,
@@ -96,7 +96,7 @@ export default defineComponent({
     },
     textColor: {
       type: String,
-    }
+    },
   },
   setup(props, ctx: SetupContext) {
     const { type, size, shape, textColor, plain, disabled, shadow, icon, iconColor, iconSize, loading, loadingSize, loadingText, color, shadowStyle } = toRefs(props)
@@ -114,7 +114,7 @@ export default defineComponent({
       return {
         color: textColor.value,
         backgroundColor: color.value,
-        boxShadow: shadowStyle.value
+        boxShadow: shadowStyle.value,
       }
     })
     const iconJsx = () => {
@@ -123,8 +123,8 @@ export default defineComponent({
           class={[`${classPrefix}__icon`, 'star-icon', `star-icon-${icon.value}`]}
           style={{
             color: iconColor.value,
-            fontSize: typeof iconSize.value === "number" ? `${iconSize.value}px` : iconSize.value,
-            marginRight: shape.value !== 'circle' && ctx.slots.default?.() ? '5px' : ''
+            fontSize: typeof iconSize.value === 'number' ? `${iconSize.value}px` : iconSize.value,
+            marginRight: shape.value !== 'circle' && ctx.slots.default?.() ? '5px' : '',
           }}
         ></i> : null
       )
@@ -135,8 +135,8 @@ export default defineComponent({
           <i
             class={[`${classPrefix}__icon`, `${classPrefix}--loading`, 'star-icon', `star-icon-loading`]}
             style={{
-              fontSize: typeof loadingSize.value === "number" ? `${loadingSize.value}px` : loadingSize.value,
-              marginRight: shape.value !== 'circle' && ctx.slots.default?.() ? '5px' : ''
+              fontSize: typeof loadingSize.value === 'number' ? `${loadingSize.value}px` : loadingSize.value,
+              marginRight: shape.value !== 'circle' && ctx.slots.default?.() ? '5px' : '',
             }}
           ></i>
           {shape.value != 'circle' ? loadingText.value : null}

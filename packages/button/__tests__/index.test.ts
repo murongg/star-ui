@@ -1,4 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import mountTest from '../../../tests/share/mountTest'
 import Button from '../index'
 
@@ -8,8 +8,8 @@ describe('Button Component', () => {
     test('prop: type test', () => {
       const wrapper = mount(Button, {
         props: {
-          type: 'danger'
-        }
+          type: 'danger',
+        },
       })
       expect(wrapper.classes()).toContain('star-button--danger')
     })
@@ -17,8 +17,8 @@ describe('Button Component', () => {
     test('prop: size test', () => {
       const wrapper = mount(Button, {
         props: {
-          size: 'mini'
-        }
+          size: 'mini',
+        },
       })
       expect(wrapper.find('.star-button--mini').exists()).toBeTruthy()
     })
@@ -26,8 +26,8 @@ describe('Button Component', () => {
     test('prop: shape test', () => {
       const wrapper = mount(Button, {
         props: {
-          shape: 'round'
-        }
+          shape: 'round',
+        },
       })
       expect(wrapper.classes()).toContain('star-button--round')
     })
@@ -37,8 +37,8 @@ describe('Button Component', () => {
         props: {
           icon: 'heart',
           iconSize: '10px',
-          iconColor: '#fff'
-        }
+          iconColor: '#fff',
+        },
       })
       expect(wrapper.find('.star-button__icon').exists()).toBeTruthy()
       expect(wrapper.find('.star-icon-heart').exists()).toBeTruthy()
@@ -48,8 +48,8 @@ describe('Button Component', () => {
     test('prop: plain test', () => {
       const wrapper = mount(Button, {
         props: {
-          plain: true
-        }
+          plain: true,
+        },
       })
       expect(wrapper.classes()).toContain('star-button--plain')
     })
@@ -57,26 +57,26 @@ describe('Button Component', () => {
     test('prop: disabled test', async () => {
       const wrapper = mount(Button, {
         props: {
-          disabled: true
-        }
+          disabled: true,
+        },
       })
-      const handleClick = jest.fn();
-      await wrapper.trigger('click');
-      expect(handleClick).not.toBeCalled();
+      const handleClick = jest.fn()
+      await wrapper.trigger('click')
+      expect(handleClick).not.toBeCalled()
     })
     test('prop: loading test', async () => {
       const wrapper = mount(Button, {
         props: {
           loading: true,
-          loadingText: "自定义加载",
-          loadingSize: "10px"
-        }
+          loadingText: '自定义加载',
+          loadingSize: '10px',
+        },
       })
-      const handleClick = jest.fn();
-      await wrapper.trigger('click');
-      expect(handleClick).not.toBeCalled();
-      expect(wrapper.text()).toEqual("自定义加载")
-      expect(wrapper.find('.star-button--loading').attributes('style')).toContain("font-size: 10px")
+      const handleClick = jest.fn()
+      await wrapper.trigger('click')
+      expect(handleClick).not.toBeCalled()
+      expect(wrapper.text()).toEqual('自定义加载')
+      expect(wrapper.find('.star-button--loading').attributes('style')).toContain('font-size: 10px')
     })
 
 
@@ -84,8 +84,8 @@ describe('Button Component', () => {
       const wrapper = mount(Button, {
         props: {
           shadow: true,
-          shadowStyle: "10px 10px 10px #ccc"
-        }
+          shadowStyle: '10px 10px 10px #ccc',
+        },
       })
       expect(wrapper.classes()).toContain('star-button--shadow')
       expect(wrapper.attributes('style')).toContain('box-shadow: 10px 10px 10px #ccc')

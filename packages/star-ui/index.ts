@@ -4,7 +4,7 @@ import Icon from '@star-ui/icon'
 import { App } from 'vue'
 const components = [
   Button,
-  Icon
+  Icon,
 ]
 
 const install = function (app: App) {
@@ -15,9 +15,9 @@ const install = function (app: App) {
 
 export {
   Button,
-  Icon
+  Icon,
 }
 
 export default {
-  install
+  install,
 }

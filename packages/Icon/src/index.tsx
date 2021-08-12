@@ -1,4 +1,4 @@
-import { defineComponent, ComponentCustomProps, computed, toRefs } from "vue";
+import { defineComponent, ComponentCustomProps, computed, toRefs } from 'vue'
 
 export interface IIconProps extends ComponentCustomProps {
   name: string
@@ -7,19 +7,19 @@ export interface IIconProps extends ComponentCustomProps {
 }
 
 export default defineComponent({
-  name: 'star-icon',
+  name: 'StarIcon',
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     size: {
       type: [String, Number],
-      default: 20
+      default: 20,
     },
     color: {
-      type: String
-    }
+      type: String,
+    },
   },
   setup(props) {
     const { name, size, color } = toRefs(props)
@@ -29,7 +29,7 @@ export default defineComponent({
     const styles = computed(() => {
       return {
         fontSize: typeof size.value === 'number' ? `${size.value}px` : size.value,
-        color: color.value
+        color: color.value,
       }
     })
     return () => {
@@ -37,5 +37,5 @@ export default defineComponent({
         <i class={classes.value} style={styles.value}></i>
       )
     }
-  }
+  },
 })
