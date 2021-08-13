@@ -1,11 +1,15 @@
 <template>
   <Page title="Transition 过渡">
     <page-box title="动画展示">
-      <star-button size="large" shape="semicircle" @click="handleClickShow"
-        >切换显示/隐藏</star-button
+      <star-button
+        size="large"
+        shape="semicircle"
+        @click="handleClickShow"
       >
+        切换显示/隐藏
+      </star-button>
     </page-box>
-    <star-transition name="fade" v-model="show" duration="0.5s">
+    <star-transition v-model="show" name="fade" duration="0.5s">
       <div class="block"></div>
     </star-transition>
   </Page>
@@ -16,14 +20,14 @@ export default {
   data() {
     return {
       show: false,
-    };
+    }
   },
   methods: {
     handleClickShow() {
-      this.show = !this.show;
+      this.show = !this.show
     },
   },
-};
+}
 </script>
 
 <style scoped>

@@ -5,7 +5,7 @@ import { App } from 'vue'
 const components = [
   Button,
   Icon,
-  Transition
+  Transition,
 ]
 
 const install = function (app: App) {
@@ -17,7 +17,7 @@ const install = function (app: App) {
 export {
   Button,
   Icon,
-  Transition
+  Transition,
 }
 
 export default {

@@ -11,14 +11,14 @@
   </Page>
 </template>
 <script>
-import icons from './icons';
+import icons from './icons'
 export default {
   setup() {
     return {
       icons,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>

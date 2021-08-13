@@ -17,22 +17,22 @@
 </template>
 
 <script lang="ts">
-import { useRouter } from 'vue-router';
-import { reactive } from 'vue';
-import { components } from './components';
+import { useRouter } from 'vue-router'
+import { reactive } from 'vue'
+import { components } from './components'
 export default {
   setup() {
-    const router = useRouter();
+    const router = useRouter()
     const handleClick = () => {
-      router.push('/button');
-    };
-    const list = reactive(components);
+      router.push('/button')
+    }
+    const list = reactive(components)
     return {
       handleClick,
       list,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
