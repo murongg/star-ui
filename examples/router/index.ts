@@ -7,22 +7,22 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/base/button',
     name: 'button',
-    component: button
+    component: button,
   },
   {
     path: '/base/icon',
     name: 'icon',
-    component: icon
+    component: icon,
   },
   {
     path: '/base/transition',
     name: 'transition',
-    component: transition
-  }
+    component: transition,
+  },
 
 ]
 
 export default createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 })

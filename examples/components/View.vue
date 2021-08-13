@@ -9,7 +9,7 @@
 <script lang="ts">
 export default {
   name: 'View',
-};
+}
 </script>
 
 <style lang="scss" scoped>

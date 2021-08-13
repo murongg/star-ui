@@ -3,7 +3,7 @@
     <div class="l-list-box">
       <h4 @click="handleClickShow">
         {{ title }}
-        <i :class="show ? 'active' : ''" />
+        <i :class="show ? 'active' : ''"></i>
       </h4>
       <ul v-show="show">
         <li v-for="(item, index) in list" :key="index">
@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   name: 'ListBox',
   props: {
@@ -32,23 +32,23 @@ export default {
     },
   },
   setup() {
-    const show = ref(true);
+    const show = ref(true)
     const handleClickShow = () => {
-      show.value = !show.value;
-    };
-    const router = useRouter();
-    const go = (link) => {
+      show.value = !show.value
+    }
+    const router = useRouter()
+    const go = link => {
       if (link) {
-        router.push(link);
+        router.push(link)
       }
-    };
+    }
     return {
       show,
       handleClickShow,
       go,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

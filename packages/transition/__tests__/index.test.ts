@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import mountTest from '../../../tests/share/mountTest'
 import Transition from '../src/index'
 
-describe("Transition Component", () => {
+describe('Transition Component', () => {
   mountTest(Transition)
   describe('test props', () => {
     test('prop: duration test', () => {
