@@ -1,10 +1,11 @@
 import Button from '@star-ui/button'
 import Icon from '@star-ui/icon'
-
+import Transition from '@star-ui/transition'
 import { App } from 'vue'
 const components = [
   Button,
   Icon,
+  Transition
 ]
 
 const install = function (app: App) {
@@ -16,6 +17,7 @@ const install = function (app: App) {
 export {
   Button,
   Icon,
+  Transition
 }
 
 export default {
