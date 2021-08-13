@@ -3,26 +3,26 @@ import { defineComponent, ComponentCustomProps, Transition, vShow, h, withDirect
 const classPrefix = 'star-transition'
 
 export interface ITransitionProps extends ComponentCustomProps {
-  name: string,
-  duration: string | number,
+  name: string
+  duration: string | number
   modelValue: boolean
 }
 
 export default defineComponent({
-  name: 'star-transition',
+  name: 'StarTransition',
   props: {
     name: {
       type: String,
-      default: 'fade'
+      default: 'fade',
     },
     duration: {
       type: [Number, String],
-      default: 500
+      default: 500,
     },
     modelValue: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
@@ -32,22 +32,22 @@ export default defineComponent({
       emit('update:modelValue', modelValue.value)
     })
 
-    const animationDuration = typeof duration.value === "number" ? ref(`${duration.value}ms`) : duration
+    const animationDuration = typeof duration.value === 'number' ? ref(`${duration.value}ms`) : duration
     return {
-      animationDuration
+      animationDuration,
     }
   },
   render() {
     return h(Transition, {
-      name: `${classPrefix}-${this.name}`
+      name: `${classPrefix}-${this.name}`,
     }, {
       default: () => withDirectives(
         h('div', {
           class: `${classPrefix}`,
-          style: `animation-duration: ${this.animationDuration};`
+          style: `animation-duration: ${this.animationDuration};`,
         }, [this.$slots.default?.()]),
-        [[vShow, this.modelValue]]
-      )
+        [[vShow, this.modelValue]],
+      ),
     })
-  }
+  },
 })
