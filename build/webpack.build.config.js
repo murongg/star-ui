@@ -6,7 +6,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, '../packages/lin-ui/index.ts'),
+  entry: path.resolve(__dirname, '../packages/star-ui/index.ts'),
   plugins: [
     new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
