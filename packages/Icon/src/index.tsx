@@ -32,10 +32,14 @@ export default defineComponent({
         color: color.value,
       }
     })
-    return () => {
-      return (
-        <i class={classes.value} style={styles.value}></i>
-      )
+    return {
+      classes,
+      styles,
     }
+  },
+  render() {
+    return (
+      <i class={this.classes} style={this.styles}></i>
+    )
   },
 })
