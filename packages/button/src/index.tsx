@@ -131,44 +131,38 @@ export default defineComponent({
     }
   },
   render() {
-    const iconJsx = () => {
-      return (
-        this.icon ? <i
-          class={[`${classPrefix}__icon`, 'star-icon', `star-icon-${this.icon}`]}
+    const iconJsx = (
+      this.icon ? <i
+        class={[`${classPrefix}__icon`, 'star-icon', `star-icon-${this.icon}`]}
+        style={{
+          color: this.iconColor,
+          fontSize: typeof this.iconSize === 'number' ? `${this.iconSize}px` : this.iconSize,
+          marginRight: this.shape !== 'circle' && this.$slots.default?.() ? '5px' : '',
+        }}
+      ></i> : null
+    )
+    const loadingJsx = (
+      <>
+        <i
+          class={[`${classPrefix}__icon`, `${classPrefix}--loading`, 'star-icon', `star-icon-loading`]}
           style={{
-            color: this.iconColor,
-            fontSize: typeof this.iconSize === 'number' ? `${this.iconSize}px` : this.iconSize,
+            fontSize: typeof this.loadingSize === 'number' ? `${this.loadingSize}px` : this.loadingSize,
             marginRight: this.shape !== 'circle' && this.$slots.default?.() ? '5px' : '',
           }}
-        ></i> : null
-      )
-    }
-    const loadingJsx = () => {
-      return (
-        <>
-          <i
-            class={[`${classPrefix}__icon`, `${classPrefix}--loading`, 'star-icon', `star-icon-loading`]}
-            style={{
-              fontSize: typeof this.loadingSize === 'number' ? `${this.loadingSize}px` : this.loadingSize,
-              marginRight: this.shape !== 'circle' && this.$slots.default?.() ? '5px' : '',
-            }}
-          ></i>
-          {this.shape != 'circle' ? this.loadingText : null}
-        </>
-      )
-    }
+        ></i>
+        {this.shape != 'circle' ? this.loadingText : null}
+      </>
+    )
 
-    const buttonContentJsx = () => {
-      return (
-        <>
-          {iconJsx()}
-          {this.shape != 'circle' ? this.$slots.default?.() : null}
-        </>
-      )
-    }
+    const buttonContentJsx = (
+      <>
+        {iconJsx}
+        {this.shape != 'circle' ? this.$slots.default?.() : null}
+      </>
+    )
     return (
       <button class={this.classes} style={this.styles} disabled={this.disabled || this.loading}>
-        {this.loading ? loadingJsx() : buttonContentJsx()}
+        {this.loading ? loadingJsx : buttonContentJsx}
       </button>
     )
   },
