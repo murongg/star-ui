@@ -27,7 +27,8 @@ module.exports = {
         'Example',
         'Core',
         'Lerna',
-        'Transition'
+        'Transition',
+        'Button'
       ]
     ]
   }
