@@ -26,7 +26,8 @@ module.exports = {
         'commitlint',
         'Example',
         'Core',
-        'Lerna'
+        'Lerna',
+        'Transition'
       ]
     ]
   }
