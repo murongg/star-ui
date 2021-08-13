@@ -28,7 +28,8 @@ module.exports = {
         'Core',
         'Lerna',
         'Transition',
-        'Button'
+        'Button',
+        'Icon'
       ]
     ]
   }
