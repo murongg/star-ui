@@ -1,4 +1,4 @@
-import { computed, defineComponent, PropType, toRefs, ComponentCustomProps, SetupContext } from 'vue'
+import { computed, defineComponent, PropType, toRefs, ComponentCustomProps } from 'vue'
 
 const classPrefix = 'star-button'
 export type IButtonType = PropType<'primary' | 'success' | 'danger' | 'warning' | 'info' | 'default'>;
@@ -9,9 +9,17 @@ export interface IButtonProps extends ComponentCustomProps {
   type: IButtonType
   size: IButtonSize
   shape: IButtonShape
+  icon: string
+  iconSize: string | number
+  iconColor: string
   plain: boolean
   disabled: boolean
+  loading: boolean
+  loadingSize: string | number
+  loadingText: string
   shadow: boolean
+  shadowStyle: string
+  color: string
   textColor: string
 }
 export default defineComponent({
@@ -98,8 +106,8 @@ export default defineComponent({
       type: String,
     },
   },
-  setup(props, ctx: SetupContext) {
-    const { type, size, shape, textColor, plain, disabled, shadow, icon, iconColor, iconSize, loading, loadingSize, loadingText, color, shadowStyle } = toRefs(props)
+  setup(props) {
+    const { type, size, shape, textColor, plain, shadow, color, shadowStyle } = toRefs(props)
     const classes = computed(() => {
       return [
         `${classPrefix}`,
@@ -117,14 +125,20 @@ export default defineComponent({
         boxShadow: shadowStyle.value,
       }
     })
+    return {
+      classes,
+      styles,
+    }
+  },
+  render() {
     const iconJsx = () => {
       return (
-        icon.value ? <i
-          class={[`${classPrefix}__icon`, 'star-icon', `star-icon-${icon.value}`]}
+        this.icon ? <i
+          class={[`${classPrefix}__icon`, 'star-icon', `star-icon-${this.icon}`]}
           style={{
-            color: iconColor.value,
-            fontSize: typeof iconSize.value === 'number' ? `${iconSize.value}px` : iconSize.value,
-            marginRight: shape.value !== 'circle' && ctx.slots.default?.() ? '5px' : '',
+            color: this.iconColor,
+            fontSize: typeof this.iconSize === 'number' ? `${this.iconSize}px` : this.iconSize,
+            marginRight: this.shape !== 'circle' && this.$slots.default?.() ? '5px' : '',
           }}
         ></i> : null
       )
@@ -135,11 +149,11 @@ export default defineComponent({
           <i
             class={[`${classPrefix}__icon`, `${classPrefix}--loading`, 'star-icon', `star-icon-loading`]}
             style={{
-              fontSize: typeof loadingSize.value === 'number' ? `${loadingSize.value}px` : loadingSize.value,
-              marginRight: shape.value !== 'circle' && ctx.slots.default?.() ? '5px' : '',
+              fontSize: typeof this.loadingSize === 'number' ? `${this.loadingSize}px` : this.loadingSize,
+              marginRight: this.shape !== 'circle' && this.$slots.default?.() ? '5px' : '',
             }}
           ></i>
-          {shape.value != 'circle' ? loadingText.value : null}
+          {this.shape != 'circle' ? this.loadingText : null}
         </>
       )
     }
@@ -148,16 +162,14 @@ export default defineComponent({
       return (
         <>
           {iconJsx()}
-          {shape.value != 'circle' ? ctx.slots.default?.() : null}
+          {this.shape != 'circle' ? this.$slots.default?.() : null}
         </>
       )
     }
-    return () => {
-      return (
-        <button class={classes.value} style={styles.value} disabled={disabled.value || loading.value}>
-          {loading.value ? loadingJsx() : buttonContentJsx()}
-        </button>
-      )
-    }
+    return (
+      <button class={this.classes} style={this.styles} disabled={this.disabled || this.loading}>
+        {this.loading ? loadingJsx() : buttonContentJsx()}
+      </button>
+    )
   },
 })
