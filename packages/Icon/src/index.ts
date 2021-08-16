@@ -1,4 +1,4 @@
-import { defineComponent, ComponentCustomProps, computed, toRefs } from 'vue'
+import { defineComponent, ComponentCustomProps, computed, toRefs, h } from 'vue'
 
 export interface IIconProps extends ComponentCustomProps {
   name: string
@@ -38,8 +38,9 @@ export default defineComponent({
     }
   },
   render() {
-    return (
-      <i class={this.classes} style={this.styles}></i>
-    )
+    return h('i', {
+      class: this.classes,
+      style: this.styles
+    })
   },
 })
