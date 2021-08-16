@@ -1,0 +1,28 @@
+@use "sass:math";
+@import "./common/variables";
+$prefix: "#{$namespace}-col";
+
+.#{$prefix} {
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+
+  &:first-child {
+    padding-left: 0 !important;
+  }
+
+  &:last-child {
+    padding-right: 0 !important;
+  }
+
+  @for $i from 0 through 24 {
+    &-col-#{$i} {
+      max-width: (math.div(1, 24) * $i * 100) * 1%;
+      flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
+    }
+
+    &-offset-#{$i} {
+      margin-left: (math.div(1, 24) * $i * 100) * 1%;
+    }
+  }
+}

@@ -29,7 +29,10 @@ module.exports = {
         'Lerna',
         'Transition',
         'Button',
-        'Icon'
+        'Icon',
+        'Layout',
+        'Row',
+        'Col'
       ]
     ]
   }
