@@ -43,6 +43,16 @@ module.exports = {
               link: '/components/base/transition',
             },
           ],
+        }, {
+          text: '布局组件',
+          link: '/components/layout/layout',
+          children: [
+            {
+              text: 'Layout 布局',
+              link: '/components/layout/layout',
+            },
+
+          ],
         }
       ]
     }

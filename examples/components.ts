@@ -28,5 +28,15 @@ export const components: Component[] = [
       },
     ],
   },
+  {
+    title: '布局组件',
+    type: 'layout',
+    children: [
+      {
+        title: 'Layout 布局',
+        link: 'layout',
+      },
+    ],
+  },
 ]
 

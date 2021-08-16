@@ -5,18 +5,20 @@
         {{ title }}
         <i :class="show ? 'active' : ''"></i>
       </h4>
-      <ul v-show="show">
-        <li v-for="(item, index) in list" :key="index">
-          <span @click="go(`/${type}/${item.link}`)">{{ item.title }}</span>
-        </li>
-      </ul>
+      <star-transition v-model="show" duration="0.5s">
+        <ul>
+          <li v-for="(item, index) in list" :key="index">
+            <span @click="go(`/${type}/${item.link}`)">{{ item.title }}</span>
+          </li>
+        </ul>
+      </star-transition>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 export default {
   name: 'ListBox',
   props: {
@@ -32,23 +34,23 @@ export default {
     },
   },
   setup() {
-    const show = ref(true)
+    const show = ref(false);
     const handleClickShow = () => {
-      show.value = !show.value
-    }
-    const router = useRouter()
-    const go = link => {
+      show.value = !show.value;
+    };
+    const router = useRouter();
+    const go = (link) => {
       if (link) {
-        router.push(link)
+        router.push(link);
       }
-    }
+    };
     return {
       show,
       handleClickShow,
       go,
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
