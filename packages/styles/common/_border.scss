@@ -1,0 +1,30 @@
+@import "../mixins/hairline";
+@import "./variables";
+
+.#{$namespace}-hairline {
+  position: relative;
+  &::after {
+    @include hairline();
+  }
+}
+
+.#{$namespace}-hairline-all {
+  position: relative;
+  &::after {
+    @include hairline();
+    border-width: 1px;
+  }
+}
+
+.#{$namespace}-hairline-top {
+  position: relative;
+  &::after {
+    @include hairline-top();
+  }
+}
+.#{$namespace}-hairline-bottom {
+  position: relative;
+  &::after {
+    @include hairline-bottom();
+  }
+}

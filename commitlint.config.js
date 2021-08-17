@@ -32,7 +32,8 @@ module.exports = {
         'Icon',
         'Layout',
         'Row',
-        'Col'
+        'Col',
+        'Grid'
       ]
     ]
   }

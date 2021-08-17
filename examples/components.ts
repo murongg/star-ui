@@ -36,6 +36,10 @@ export const components: Component[] = [
         title: 'Layout 布局',
         link: 'layout',
       },
+      {
+        title: 'Grid 宫格',
+        link: 'grid',
+      },
     ],
   },
 ]
