@@ -51,7 +51,10 @@ module.exports = {
               text: 'Layout 布局',
               link: '/components/layout/layout',
             },
-
+            {
+              text: 'Grid 宫格',
+              link: '/components/layout/grid',
+            },
           ],
         }
       ]

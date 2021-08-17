@@ -3,6 +3,7 @@ import button from '../pages/base/button/index.vue'
 import icon from '../pages/base/icon/index.vue'
 import transition from '../pages/base/transition/index.vue'
 import layout from '../pages/layout/layout/index.vue'
+import grid from '../pages/layout/grid/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -25,7 +26,11 @@ const routes: RouteRecordRaw[] = [
     name: 'layout',
     component: layout,
   },
-
+  {
+    path: '/layout/grid',
+    name: 'grid',
+    component: grid,
+  },
 ]
 
 export default createRouter({
