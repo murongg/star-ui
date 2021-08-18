@@ -13,7 +13,7 @@ module.exports = {
         'PlopTemplate',
         'tsconfig.json',
         'Github',
-        'VitePress',
+        'VuePress',
         'package.json',
         'License',
         'TravisCI',
