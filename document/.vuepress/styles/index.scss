@@ -70,6 +70,8 @@
   --sidebar-width-mobile: calc(var(--sidebar-width) * 0.82);
   --content-width: 900px;
   --homepage-width: 960px;
+
+  --phone-bg-color: #edf0f4;
 }
 
 // plugin-back-to-top
@@ -170,6 +172,8 @@ html.dark {
   --code-ln-color: #9e9e9e;
   --code-ln-wrapper-width: 3.5rem;
   --code-hl-bg-color: #363b46;
+
+  --phone-bg-color: #22272e;
 }
 
 // plugin-docsearch
@@ -288,4 +292,9 @@ div[class*="language-"].line-numbers-mode::after {
 .sidebar {
   border: none;
   box-shadow: 2px 2px 30px var(--c-bg-card-shadow);
+}
+
+.page-nav,
+.page-meta {
+  margin: 0;
 }

@@ -3,7 +3,8 @@ module.exports = {
   lang: 'zh-CN',
   title: 'Star UI',
   description: '这是我的第一个 VuePress 站点',
-
+  theme: path.resolve(__dirname, './theme/index.js'),
+  dest: path.resolve(__dirname, '../../document-dist'),
   themeConfig: {
     navbar: [
       {
