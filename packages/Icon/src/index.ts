@@ -40,7 +40,7 @@ export default defineComponent({
   render() {
     return h('i', {
       class: this.classes,
-      style: this.styles
+      style: this.styles,
     })
   },
 })
