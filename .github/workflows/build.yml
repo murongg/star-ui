@@ -16,10 +16,9 @@ jobs:
     - run: yarn build:demo
 
     - name: Deploy gh-pages
-      uses: JamesIves/github-pages-deploy-action@3.5.9
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        BRANCH: gh-pages 
-        FOLDER: document-dist
+      uses: JamesIves/github-pages-deploy-action@4.1.4        
       with:
+          ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          BRANCH: gh-pages 
+          FOLDER: document-dist
           emptyCommits: false
