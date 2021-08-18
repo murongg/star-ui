@@ -13,5 +13,5 @@ module.exports = {
     }
   },
   outputDir: "document-dist/demo",
-  publicPath: "./"
+  publicPath: "/star-ui/demo/"
 };
