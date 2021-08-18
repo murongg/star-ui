@@ -6,7 +6,7 @@ yarn-error.log*
 package-lock.json
 es
 dist
-
+document-dist
 # Test publish files
 package/
 
