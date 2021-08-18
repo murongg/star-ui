@@ -5,7 +5,7 @@ const config = {
     DEMO_URL: 'http://localhost:8080/#'
   },
   production: {
-    DEMO_URL: '/demo/#'
+    DEMO_URL: '/star-ui/demo/#'
   }
 }
 
