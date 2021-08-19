@@ -29,6 +29,8 @@ export {
   Button,
   Icon,
   Transition,
+  Row,
+  Col,
   Grid,
   GridItem,
   Badge,

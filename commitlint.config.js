@@ -9,6 +9,7 @@ module.exports = {
       2,
       'always',
       [
+        'Boring',
         'EsLint',
         'PlopTemplate',
         'tsconfig.json',
