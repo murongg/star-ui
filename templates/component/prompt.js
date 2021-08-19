@@ -1,7 +1,6 @@
 const {
-  notEmpty,
-  firstLetterToUpperCase,
-  checkEnglishLetters
+  checkEnglishLetters,
+  updateStarUIPackage
 } = require('../utils')
 
 module.exports = {
@@ -18,6 +17,7 @@ module.exports = {
     } = inputData
     // name = firstLetterToUpperCase(name)
     const type = 'add'
+    updateStarUIPackage(name)
     const actions = [{
       type,
       path: `packages/${name}/index.ts`,
