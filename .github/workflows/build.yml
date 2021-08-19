@@ -39,6 +39,7 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
       - name: Install lerna
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: npx lerna bootstrap
 
       # 运行构建脚本
