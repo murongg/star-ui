@@ -5,6 +5,7 @@ import Row from '@star-ui/row'
 import Col from '@star-ui/col'
 import Grid from '@star-ui/grid'
 import GridItem from '@star-ui/grid-item'
+import Badge from '@star-ui/badge'
 
 import { App } from 'vue'
 const components = [
@@ -15,6 +16,7 @@ const components = [
   Col,
   Grid,
   GridItem,
+  Badge,
 ]
 
 const install = function (app: App) {
@@ -29,6 +31,7 @@ export {
   Transition,
   Grid,
   GridItem,
+  Badge,
 }
 
 export default {
