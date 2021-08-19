@@ -1,0 +1,50 @@
+@import "./theme/color";
+@import "./theme/border";
+@import "./common/variables";
+
+$prefix: "#{$namespace}-badge";
+
+.#{$prefix} {
+  position: relative;
+  display: inline-block;
+
+  &__content {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    background-color: $star-badge-color;
+    border: 1px solid #fff;
+    z-index: 10;
+  }
+
+  &--circle {
+    min-width: 16px;
+    padding: 0 4px;
+    line-height: 16px;
+    border-radius: 999px;
+  }
+
+  &--horn {
+    min-width: 27px;
+    padding: 0 4px;
+    line-height: 14px;
+    border-radius: 7px 7px 7px 0px;
+  }
+
+  &--fixed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(60%, -50%);
+  }
+
+  &--dot {
+    width: 8px;
+    height: 8px;
+    min-width: 0;
+    background-color: $star-badge-color;
+    border-radius: $star-border-radius-max;
+  }
+}

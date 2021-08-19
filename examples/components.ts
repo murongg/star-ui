@@ -42,5 +42,16 @@ export const components: Component[] = [
       },
     ],
   },
+  {
+    title: '视图组件',
+    type: 'view',
+    children: [
+      {
+        title: 'Badge 徽标',
+        link: 'badge',
+      },
+
+    ],
+  },
 ]
 

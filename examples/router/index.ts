@@ -4,6 +4,7 @@ import icon from '../pages/base/icon/index.vue'
 import transition from '../pages/base/transition/index.vue'
 import layout from '../pages/layout/layout/index.vue'
 import grid from '../pages/layout/grid/index.vue'
+import badge from '../pages/view/badge/index.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -30,6 +31,11 @@ const routes: RouteRecordRaw[] = [
     path: '/layout/grid',
     name: 'grid',
     component: grid,
+  },
+  {
+    path: '/view/badge',
+    name: 'badge',
+    component: badge,
   },
 ]
 

@@ -33,7 +33,8 @@ module.exports = {
         'Layout',
         'Row',
         'Col',
-        'Grid'
+        'Grid',
+        'Badge'
       ]
     ]
   }

@@ -58,6 +58,15 @@ module.exports = {
               link: '/components/layout/grid',
             },
           ],
+        }, {
+          text: '视图组件',
+          link: '/components/view/badge',
+          children: [
+            {
+              text: 'Badge 徽标',
+              link: '/components/view/badge',
+            },
+          ],
         }
       ]
     }
