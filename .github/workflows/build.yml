@@ -38,6 +38,8 @@ jobs:
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
+      - name: Install lerna
+        run: npx lerna bootstrap
 
       # 运行构建脚本
       - name: Build VuePress site
