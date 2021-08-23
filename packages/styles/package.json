@@ -1,0 +1,22 @@
+{
+  "name": "@star-ui/styles",
+  "private": "true",
+  "version": "0.0.0",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "homepage": "https://github.com/murongg/star-ui#readme",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "chalk": "4.1.2",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.0.0",
+    "sass": "1.37.0"
+  }
+}

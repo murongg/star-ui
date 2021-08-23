@@ -21,6 +21,7 @@ module.exports = {
         'GithubAction',
         'Husky',
         'README',
+        'Build',
         'util',
         '.editorconfig',
         '.gitignore',
