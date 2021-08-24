@@ -1,6 +1,6 @@
 node_modules/
-**/*.spec.*
-**/style/
+**/*.test.*
+**/styles/
 *.html
 /components/test/*
 es/

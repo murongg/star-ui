@@ -1,0 +1,14 @@
+@import "./common/variables";
+@import "./mixins/hairline";
+$prefix: "#{$namespace}-grid";
+
+.#{$prefix} {
+  display: grid;
+  &.#{$namespace}-hairline {
+    @debug ".#{$prefix}.#{$namespace}-hairline";
+    &::after {
+      z-index: 1;
+      border-width: 1px 0 0 1px;
+    }
+  }
+}

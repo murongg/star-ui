@@ -1,0 +1,233 @@
+@import "./transitions/index.scss";
+@import "./common/variables";
+@import "./theme/animation";
+
+$prefix: "#{$namespace}-transition";
+
+.#{$prefix} {
+  animation-duration: $star-animation-duration-base;
+}
+
+.#{$prefix}-back-down-enter-active {
+  animation-name: backInDown;
+}
+
+.#{$prefix}-back-down-leave-active {
+  animation-name: backOutDown;
+}
+
+.#{$prefix}-back-up-enter-active {
+  animation-name: backInUp;
+}
+
+.#{$prefix}-back-up-leave-active {
+  animation-name: backOutUp;
+}
+
+.#{$prefix}-back-left-enter-active {
+  animation-name: backInLeft;
+}
+
+.#{$prefix}-back-left-leave-active {
+  animation-name: backOutLeft;
+}
+
+.#{$prefix}-back-right-enter-active {
+  animation-name: backInRight;
+}
+
+.#{$prefix}-back-right-leave-active {
+  animation-name: backOutRight;
+}
+
+.#{$prefix}-fade-enter-active {
+  animation-name: fadeIn;
+}
+
+.#{$prefix}-fade-leave-active {
+  animation-name: fadeOut;
+}
+
+.#{$prefix}-fade-down-enter-active {
+  animation-name: fadeInDown;
+}
+
+.#{$prefix}-fade-down-leave-active {
+  animation-name: fadeOutDown;
+}
+
+.#{$prefix}-fade-up-enter-active {
+  animation-name: fadeInUp;
+}
+
+.#{$prefix}-fade-up-leave-active {
+  animation-name: fadeOutUp;
+}
+
+.#{$prefix}-fade-left-enter-active {
+  animation-name: fadeInLeft;
+}
+
+.#{$prefix}-fade-left-leave-active {
+  animation-name: fadeOutLeft;
+}
+
+.#{$prefix}-fade-right-enter-active {
+  animation-name: fadeInRight;
+}
+
+.#{$prefix}-fade-right-leave-active {
+  animation-name: fadeOutRight;
+}
+
+.#{$prefix}-slide-down-enter-active {
+  animation-name: slideInDown;
+}
+
+.#{$prefix}-slide-down-leave-active {
+  animation-name: slideOutDown;
+}
+
+.#{$prefix}-slide-up-enter-active {
+  animation-name: slideInUp;
+}
+
+.#{$prefix}-slide-up-leave-active {
+  animation-name: slideOutUp;
+}
+
+.#{$prefix}-slide-left-enter-active {
+  animation-name: slideInLeft;
+}
+
+.#{$prefix}-slide-left-leave-active {
+  animation-name: slideOutLeft;
+}
+
+.#{$prefix}-slide-right-enter-active {
+  animation-name: slideInRight;
+}
+
+.#{$prefix}-slide-right-leave-active {
+  animation-name: slideOutRight;
+}
+
+.#{$prefix}-zoom-enter-active {
+  animation-name: zoomIn;
+}
+
+.#{$prefix}-zoom-leave-active {
+  animation-name: zoomOut;
+}
+
+.#{$prefix}-zoom-down-enter-active {
+  animation-name: zoomInDown;
+}
+
+.#{$prefix}-zoom-down-leave-active {
+  animation-name: zoomOutDown;
+}
+
+.#{$prefix}-zoom-up-enter-active {
+  animation-name: zoomInUp;
+}
+
+.#{$prefix}-zoom-up-leave-active {
+  animation-name: zoomOutUp;
+}
+
+.#{$prefix}-zoom-left-enter-active {
+  animation-name: zoomInLeft;
+}
+
+.#{$prefix}-zoom-left-leave-active {
+  animation-name: zoomOutLeft;
+}
+
+.#{$prefix}-zoom-right-enter-active {
+  animation-name: zoomInRight;
+}
+
+.#{$prefix}-zoom-right-leave-active {
+  animation-name: zoomOutRight;
+}
+
+.#{$prefix}-bounce-enter-active {
+  animation-name: bounceIn;
+}
+
+.#{$prefix}-bounce-leave-active {
+  animation-name: bounceOut;
+}
+
+.#{$prefix}-bounce-down-enter-active {
+  animation-name: bounceInDown;
+}
+
+.#{$prefix}-bounce-down-leave-active {
+  animation-name: bounceOutDown;
+}
+
+.#{$prefix}-bounce-up-enter-active {
+  animation-name: bounceInUp;
+}
+
+.#{$prefix}-bounce-up-leave-active {
+  animation-name: bounceOutUp;
+}
+
+.#{$prefix}-bounce-left-enter-active {
+  animation-name: bounceInLeft;
+}
+
+.#{$prefix}-bounce-left-leave-active {
+  animation-name: bounceOutLeft;
+}
+
+.#{$prefix}-bounce-right-enter-active {
+  animation-name: bounceInRight;
+}
+
+.#{$prefix}-bounce-right-leave-active {
+  animation-name: bounceOutRight;
+}
+
+.#{$prefix}-rotate-enter-active {
+  animation-name: rotateIn;
+}
+
+.#{$prefix}-rotate-leave-active {
+  animation-name: rotateOut;
+}
+
+.#{$prefix}-rotate-down-left-enter-active {
+  animation-name: rotateInDownLeft;
+}
+
+.#{$prefix}-rotate-down-left-leave-active {
+  animation-name: rotateOutDownLeft;
+}
+
+.#{$prefix}-rotate-down-right-enter-active {
+  animation-name: rotateInDownRight;
+}
+
+.#{$prefix}-rotate-down-right-leave-active {
+  animation-name: rotateOutDownRight;
+}
+
+.#{$prefix}-rotate-up-left-enter-active {
+  animation-name: rotateInUpLeft;
+}
+
+.#{$prefix}-rotate-up-left-leave-active {
+  animation-name: rotateOutUpLeft;
+}
+
+.#{$prefix}-rotate-up-right-enter-active {
+  animation-name: rotateInUpRight;
+}
+
+.#{$prefix}-rotate-up-right-leave-active {
+  animation-name: rotateOutUpRight;
+}

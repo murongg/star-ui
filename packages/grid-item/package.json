@@ -1,0 +1,7 @@
+{
+  "name": "@star-ui/grid-item",
+  "version": "0.0.0",
+  "homepage": "https://github.com/murongg/star-ui#readme",
+  "license": "ISC",
+  "main": "dist/main.js"
+}

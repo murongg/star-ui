@@ -9,7 +9,9 @@ module.exports = {
       // 模板来源
       template: "examples/index.html",
       // 输出文件名
-      filename: "index.html"
+      filename: "index.html",
     }
-  }
+  },
+  outputDir: "document-dist/demo",
+  publicPath: "/star-ui/demo/"
 };

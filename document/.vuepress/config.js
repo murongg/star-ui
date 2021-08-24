@@ -3,7 +3,9 @@ module.exports = {
   lang: 'zh-CN',
   title: 'Star UI',
   description: '这是我的第一个 VuePress 站点',
-
+  theme: path.resolve(__dirname, './theme/index.js'),
+  dest: path.resolve(__dirname, '../../document-dist'),
+  base: '/star-ui/',
   themeConfig: {
     navbar: [
       {
@@ -41,6 +43,28 @@ module.exports = {
             {
               text: 'Transition 过渡',
               link: '/components/base/transition',
+            },
+          ],
+        }, {
+          text: '布局组件',
+          link: '/components/layout/layout',
+          children: [
+            {
+              text: 'Layout 布局',
+              link: '/components/layout/layout',
+            },
+            {
+              text: 'Grid 宫格',
+              link: '/components/layout/grid',
+            },
+          ],
+        }, {
+          text: '视图组件',
+          link: '/components/view/badge',
+          children: [
+            {
+              text: 'Badge 徽标',
+              link: '/components/view/badge',
             },
           ],
         }

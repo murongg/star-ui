@@ -1,0 +1,42 @@
+@import "./common/variables";
+
+$prefix: "#{$namespace}-row";
+
+.#{$prefix} {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  box-sizing: border-box;
+
+  &--justify-start {
+    justify-content: start;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--justify-end {
+    justify-content: flex-end;
+  }
+
+  &--justify-space-between {
+    justify-content: space-between;
+  }
+
+  &--justify-space-around {
+    justify-content: space-around;
+  }
+
+  &--align-top {
+    align-items: flex-start;
+  }
+
+  &--align-middle {
+    align-items: center;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+}

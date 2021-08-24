@@ -2,7 +2,7 @@
   <div class="l-page" :class="type">
     <header class="header">
       <h1>{{ title }}</h1>
-      <star-icon name="left" class="lic-back" @click="back"></star-icon>
+      <star-icon name="left" class="lic-back" @click="back" />
       <!-- <i>返回</i> -->
     </header>
     <div class="wrapper">
@@ -12,14 +12,14 @@
         </slot>
       </section>
       <main class="content">
-        <slot />
+        <slot></slot>
       </main>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 
 export default {
   name: 'Page',
@@ -39,15 +39,15 @@ export default {
     },
   },
   setup() {
-    const router = useRouter();
+    const router = useRouter()
     const back = () => {
-      router.back();
-    };
+      router.back()
+    }
     return {
       back,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

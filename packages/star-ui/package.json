@@ -11,7 +11,13 @@
   ],
   "dependencies": {
     "@star-ui/button": "^0.0.0",
-    "@star-ui/icon": "^0.0.0"
+    "@star-ui/icon": "^0.0.0",
+    "@star-ui/transition": "^0.0.0",
+    "@star-ui/col": "^0.0.0",
+    "@star-ui/row": "^0.0.0",
+    "@star-ui/grid": "^0.0.0",
+    "@star-ui/grid-item": "^0.0.0",
+    "@star-ui/badge": "^0.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npm.taobao.org"

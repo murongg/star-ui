@@ -23,7 +23,7 @@
         <star-button shape="square" type="primary">方形按钮</star-button>
         <star-button shape="round" type="primary">圆弧按钮</star-button>
         <star-button shape="semicircle" type="primary">半圆按钮</star-button>
-        <star-button shape="circle" icon="favor" type="primary"></star-button>
+        <star-button shape="circle" icon="favor" type="primary" />
       </div>
     </page-box>
     <page-box title="镂空按钮">
@@ -49,20 +49,30 @@
     <page-box title="加载按钮">
       <div class="demo-button-wrapper">
         <star-button type="primary" loading>加载按钮</star-button>
-        <star-button type="primary" loading loading-text="自定义" loading-size="30px"
-          >加载按钮</star-button
+        <star-button
+          type="primary"
+          loading
+          loading-text="自定义"
+          loading-size="30px"
         >
+          加载按钮
+        </star-button>
         <star-button type="primary" shape="circle" loading>加载按钮</star-button>
       </div>
     </page-box>
     <page-box title="图标按钮">
       <div class="demo-button-wrapper">
         <star-button type="primary" icon="favor">默认按钮</star-button>
-        <star-button shape="circle" icon="favor" type="primary"></star-button>
-        <star-button icon="favor" icon-size="30px" icon-color="#f39c12" type="primary"
-          >自定义按钮</star-button
+        <star-button shape="circle" icon="favor" type="primary" />
+        <star-button
+          icon="favor"
+          icon-size="30px"
+          icon-color="#f39c12"
+          type="primary"
         >
-        <star-button icon="favor" type="primary"></star-button>
+          自定义按钮
+        </star-button>
+        <star-button icon="favor" type="primary" />
       </div>
     </page-box>
     <page-box title="按钮阴影">
@@ -73,9 +83,13 @@
         <star-button shadow type="success">成功按钮</star-button>
         <star-button shadow type="warning">警告按钮</star-button>
         <star-button shadow type="info">信息按钮</star-button>
-        <star-button shadow shadow-style="10px 10px 10px #ccc" type="primary"
-          >自定义按钮阴影</star-button
+        <star-button
+          shadow
+          shadow-style="10px 10px 10px #ccc"
+          type="primary"
         >
+          自定义按钮阴影
+        </star-button>
       </div>
     </page-box>
     <page-box title="自定义颜色">

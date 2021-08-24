@@ -7,7 +7,7 @@ import ListBox from './components/ListBox.vue'
 import PageBox from './components/PageBox.vue'
 import Page from './components/Page.vue'
 import View from './components/View.vue'
-import "../packages/styles/index.scss";
+import '../packages/styles/src/index.scss'
 const app = createApp(App)
 app.use(StarUI)
 app.use(router)

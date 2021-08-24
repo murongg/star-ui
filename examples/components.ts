@@ -1,11 +1,11 @@
 export interface ComponentStruct {
-  title: string,
+  title: string
   link?: string
 }
 
 export interface Component {
-  title: string,
-  type: string,
+  title: string
+  type: string
   children: ComponentStruct[]
 }
 
@@ -16,17 +16,42 @@ export const components: Component[] = [
     children: [
       {
         title: 'Button 按钮',
-        link: 'button'
+        link: 'button',
       },
       {
         title: 'Icon 图标',
-        link: 'icon'
+        link: 'icon',
       },
       {
         title: 'Transition 过渡',
-        link: 'transition'
-      }
-    ]
-  }
+        link: 'transition',
+      },
+    ],
+  },
+  {
+    title: '布局组件',
+    type: 'layout',
+    children: [
+      {
+        title: 'Layout 布局',
+        link: 'layout',
+      },
+      {
+        title: 'Grid 宫格',
+        link: 'grid',
+      },
+    ],
+  },
+  {
+    title: '视图组件',
+    type: 'view',
+    children: [
+      {
+        title: 'Badge 徽标',
+        link: 'badge',
+      },
+
+    ],
+  },
 ]
 

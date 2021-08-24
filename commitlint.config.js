@@ -9,24 +9,34 @@ module.exports = {
       2,
       'always',
       [
+        'Boring',
         'EsLint',
         'PlopTemplate',
         'tsconfig.json',
         'Github',
-        'VitePress',
+        'VuePress',
         'package.json',
         'License',
         'TravisCI',
         'GithubAction',
         'Husky',
         'README',
+        'Build',
         'util',
         '.editorconfig',
         '.gitignore',
         'commitlint',
         'Example',
         'Core',
-        'Lerna'
+        'Lerna',
+        'Transition',
+        'Button',
+        'Icon',
+        'Layout',
+        'Row',
+        'Col',
+        'Grid',
+        'Badge'
       ]
     ]
   }

@@ -41,7 +41,7 @@ const icons = [
   'customer-service',
   'pull-down',
   'video',
-  'comment'
-];
+  'comment',
+]
 
-export default icons;
+export default icons

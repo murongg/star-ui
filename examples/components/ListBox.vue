@@ -3,13 +3,15 @@
     <div class="l-list-box">
       <h4 @click="handleClickShow">
         {{ title }}
-        <i :class="show ? 'active' : ''" />
+        <i :class="show ? 'active' : ''"></i>
       </h4>
-      <ul v-show="show">
-        <li v-for="(item, index) in list" :key="index">
-          <span @click="go(`/${type}/${item.link}`)">{{ item.title }}</span>
-        </li>
-      </ul>
+      <star-transition v-model="show" duration="0.5s">
+        <ul>
+          <li v-for="(item, index) in list" :key="index">
+            <span @click="go(`/${type}/${item.link}`)">{{ item.title }}</span>
+          </li>
+        </ul>
+      </star-transition>
     </div>
   </div>
 </template>
@@ -32,7 +34,7 @@ export default {
     },
   },
   setup() {
-    const show = ref(true);
+    const show = ref(false);
     const handleClickShow = () => {
       show.value = !show.value;
     };
