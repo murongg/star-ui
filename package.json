@@ -89,7 +89,14 @@
     "webpack-cli": "^3.3.12",
     "webpackbar": "^4.0.0"
   },
-  "keywords": [],
+  "main": "dist/index.js",
+  "style": "lib/styles/index.css",
+  "keywords": [
+    "vue3",
+    "vue",
+    "VUE",
+    "UI"
+  ],
   "license": "ISC",
   "workspaces": [
     "packages/*"
