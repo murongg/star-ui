@@ -1,0 +1,1 @@
+import{o as a,c as e,a as r,b as s}from"./app.b192d7ee.js";const d={},n={id:"快速上手",tabindex:"-1"},t=[r("a",{class:"header-anchor",href:"#快速上手","aria-hidden":"true"},"#",-1),s(" 快速上手")];d.render=function(r,s){return a(),e("h1",n,t)};export{d as default};

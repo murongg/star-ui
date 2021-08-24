@@ -1,0 +1,1 @@
+import{p as a,f as s,o as t,c as d,g as o}from"./app.b192d7ee.js";const e={};a("data-v-457f7444");const r={class:"card"};s(),e.render=function(a,s){return t(),d("div",r,[o(a.$slots,"default",{},void 0,!0)])},e.__scopeId="data-v-457f7444";export{e as default};

@@ -1,0 +1,1 @@
+const t={key:"v-296b5c24",path:"/components/quickstart.html",title:"快速上手",lang:"zh-CN",frontmatter:{lang:"zh-CN",title:"快速上手",description:"快速上手"},excerpt:"",headers:[],filePathRelative:"components/quickstart.md",git:{updatedTime:1628758017e3,contributors:[]}};export{t as data};
