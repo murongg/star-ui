@@ -10,6 +10,7 @@
     "build:lib": "webpack --config build/webpack.build.config.js",
     "build:demo": "cross-env NODE_ENV=production vue-cli-service build",
     "build:docs": "cross-env NODE_ENV=production vuepress build document",
+    "build:styles": "cd packages/styles && yarn clean && yarn build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "eslint -c ./.eslintrc.js --fix --ext .jsx,.js,.vue,.ts,.tsx ./packages",
     "lint:demo": "eslint -c ./.eslintrc.js --fix --ext .jsx,.js,.vue,.ts,.tsx ./examples",
